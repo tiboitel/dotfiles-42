@@ -1,0 +1,116 @@
+" Set basic options
+set nocompatible              " Disable compatibility with vi, Vim-specific features
+set number                    " Show line numbers
+set relativenumber            " Show relative line numbers for better navigation
+set cursorline                " Highlight the current line for easier focus
+set clipboard=unnamedplus     " Use the system clipboard for copy/paste
+set showmatch                 " Highlight matching parentheses/brackets
+set ignorecase                " Ignore case in search
+set smartcase                 " Override ignorecase if the search pattern has upper case
+set tabstop=4                 " Set tab width to 4 spaces
+set shiftwidth=4              " Indentation width (spaces)
+set expandtab                 " Convert tabs to spaces
+set autoindent                " Enable automatic indentation
+set smartindent               " Enable smart indentation
+set wrap                      " Wrap text at the edge of the window
+set linebreak                 " Avoid breaking words in wrapped lines
+set scrolloff=3               " Keep 3 lines visible above/below the cursor
+set splitbelow                " Split horizontally, put new window below
+set splitright                " Split vertically, put new window to the right
+set timeoutlen=300            " Faster response to mapped keys
+set wildmenu                  " Enable enhanced command-line completion
+set wildmode=longest:full     " Use the longest completion and show full matches
+
+" Enable search highlighting and incremental search
+set incsearch                 " Highlight matches as you type
+set hlsearch                  " Highlight all matches
+
+" Enable line wrapping, but not when there are no breaks in the text
+set nowrap                    " Don't wrap lines unless needed
+set textwidth=80              " Set the preferred line length for wrapping
+
+" Show line and column position in status line
+set ruler                     " Show line and column number in the status line
+
+" File types and syntax
+syntax enable                 " Enable syntax highlighting
+filetype plugin indent on     " Enable filetype-specific plugins and indentation
+
+" Enable line numbers and a status bar
+set laststatus=2              " Always show the status line
+set statusline=%f\ %y\ %m\ %r\ %=%l/%L\ %c\ %p%%  " Customize status line
+
+" Search-related settings
+set incsearch                 " Show search results as you type
+set ignorecase                " Ignore case when searching
+set smartcase                 " Use case-sensitive search if uppercase is used
+
+" Autocompletion and smart editing
+set completeopt=menuone,longest,preview  " Autocomplete settings
+set omnifunc=syntaxcomplete#Complete  " Enable omni-completion (useful for coding)
+
+" Highlight current line
+set cursorline
+
+" Enable line wrapping, soft wrap text inside window
+set wrap
+set linebreak
+
+" Enable undo history (even across sessions)
+set undofile                  " Save undo history across sessions
+set undodir=~/.vim/undo        " Define the directory for undo history
+
+" Define the plugin manager (vim-plug)
+" call plug#begin('~/.vim/plugged')
+
+" Essential Plugins
+" Plug 'junegunn/fzf.vim'                 " Fuzzy Finder for efficient file searching
+" Plug 'preservim/nerdtree'               " File tree explorer
+" Plug 'vim-airline/vim-airline'          " Lightweight status line
+" Plug 'vim-airline/vim-airline-themes'   " Additional airline themes
+" Plug 'tpope/vim-fugitive'               " Git integration
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Autocomplete engine (like VS Code)
+" Plug 'scrooloose/nerdcommenter'        " Commenting support
+" Plug 'itchyny/lightline.vim'            " Lightweight alternative to vim-airline
+" Plug 'jiangmiao/auto-pairs'             " Automatically closes pairs (braces, quotes)
+" Plug 'fatih/vim-go'                    " Go language support
+" Plug 'sheerun/vim-polyglot'             " Support for multiple programming languages
+
+" End of plugins
+" call plug#end()
+
+" Key Mappings
+" nnoremap <leader>ff :Files<CR>         " Fuzzy find files using fzf
+" nnoremap <leader>bb :Buffers<CR>       " Switch between buffers using fzf
+" nnoremap <leader>fg :Ag<CR>            " Fuzzy find text using fzf and Ag
+" nnoremap <leader>n :NERDTreeToggle<CR> " Toggle NERDTree file explorer
+" nnoremap <leader>gc :Git commit<CR>    " Open git commit dialog (Fugitive)
+" nnoremap <leader>gt :Git status<CR>    " Open git status in Fugitive
+" nnoremap <leader>p :Files<CR>          " Open files with fuzzy search (fzf)
+" nnoremap <leader>s :Buffers<CR>        " Switch between buffers with fuzzy search
+
+" Enable the coc.nvim auto-completion engine
+" autocmd FileType * setlocal omnifunc=CocActionAsync
+
+" Enable auto-pairing of characters (braces, quotes, etc.)
+" autocmd FileType * call AutoPairsInit()
+
+" Enable Nerd Commenter keybindings
+" let g:NERDCreateDefaultMappings = 1
+
+" Customize the appearance
+set background=dark              " Dark background for a modern look
+" colorscheme gruvbox              " Set a modern color scheme (you can choose any)
+set termguicolors                " Enable 24-bit colors for better aesthetics
+
+" Enable line numbers
+set number
+
+" Enable folding (useful for code navigation)
+set foldmethod=syntax            " Syntax-based folding
+set foldlevelstart=99            " Open all folds by default
+
+" Miscellaneous optimizations
+set lazyredraw                  " Optimize redrawing (improves performance)
+
+
