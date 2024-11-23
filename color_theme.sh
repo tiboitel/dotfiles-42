@@ -61,3 +61,5 @@ echo -e "\033]4;15;#E5E5E5\007"
 # Apply settings
 echo -e "\033]710;#878aad\007"  # Apply foreground color to the cursor
 
+# clear exit
+clear
