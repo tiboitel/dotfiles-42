@@ -35,7 +35,8 @@ setopt AUTO_LIST             # Auto list files on Tab completion
 autoload -U colors && colors
 
 #Enable vcs_info for Git status
-# setopt PROMPT_SUBST;
+setopt PROMPT_SUBST;
+
 #Enable vcs_info for Git status
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
@@ -43,7 +44,7 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' formats '%F{blue}[%b]%f'
 zstyle ':vcs_info:*' actionformats '%F{yellow}[%b|%a]%f'
 zstyle ':vcs_info:*' stagedstr ' %F{green}%f'
-zstyle ':vcs_info:*' unstagedstr ' %F{red}'
+zstyle ':vcs_info:*' unstagedstr ' %F{red}%f'
 
 # Custom prompt with vcs_info
 precmd() {
