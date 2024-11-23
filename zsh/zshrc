@@ -11,8 +11,8 @@ for script in $HOME/.zsh/*.sh; do
 done
 
 # Source color theme (ensure script exists and is sourced properly)
-if [[ -f ~/.dotfiles/color_theme.sh ]]; then
-    source ~/.dotfiles/color_theme.sh
+if [[ -f ~/.dotfiles/theme/color_theme.sh ]]; then
+    source ~/.dotfiles/theme/color_theme.sh
 fi
 
 # History settings (save history in a file and share across sessions)

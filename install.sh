@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if ! [[ -f ~/.zshrc ]]; then
-	ln -s ~/.dotfiles/zshrc ~/.zshrc
+	ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
 	source ~/.zshrc > /dev/null 2>&1
     echo '.zshrc installed.'
 else
@@ -10,7 +10,7 @@ fi
 
 if ! [[ -d ~/.zsh ]]; then
 	mkdir ~/.zsh
-	cp git_prompt.sh ~/.zsh/git_prompt.sh
+	cp ./git/git_prompt.sh ~/.zsh/git_prompt.sh
 	chmod +x ~/.zsh/git_prompt.sh
     echo '.zsh directory created.'
 else
@@ -18,7 +18,7 @@ else
 fi
 
 if ! [[ -f ~/.vimrc ]]; then
-	ln -s ~/.dotfiles/vimrc ~/.vimrc
+	ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
     echo '.vimrc installed.'
 else
 	echo '.virmc already installed.'
