@@ -16,7 +16,14 @@ fi
 
 if [[ -n ~/.vimrc ]]; then
 	rm -rf ~/.vimrc
-	echo 'vimrc removed.'
+	echo '.vimrc removed.'
 else
 	echo ".virmc file doesn't exist."
+fi
+
+if [[ -n ~/.gitconfig ]]; then
+    rm -rf ~/.gitconfig
+    echo '.gitconfig removed.'
+else
+    echo ".gitconfig file doesn't exist."
 fi

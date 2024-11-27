@@ -1,0 +1,76 @@
+[user]
+name = tiboitel 
+email = tiboitel@student.42.fr
+mail = tiboitel@student.42.fr
+
+[core]
+editor = vim        # Use vim as a default editor.
+autocrlf = input    # Handle line endings for cross-platform.
+pager = less        # Enable paging for Git command
+whitespace = fix, -indent-with-non-tabs, trailing-space, cr-at-eol
+
+
+[alias]
+# Common git shortcuts
+co = checkout
+br = branch
+st = status
+lg = log --oneline --decorate --graph --all
+cm = commit
+amend = commit --amend
+df = diff
+ds = diff --staged
+mt = mergetool
+up = pull --rebase
+gp = push
+gr = rebase
+
+# Advanced log views
+hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+show-graph = log --graph --abbrev-commit --decorate --all --pretty=oneline
+
+# Quickly resolve merge conflicts
+conflict = !git diff --name-only --diff-filter=U
+
+# List large files in the repo
+large-files = "!git rev-list --objects --all | sort -k 2 | git cat-file --batch-check='%(objectname) %(objecttype) %(rest)' | grep blob | sort -n -k 3 | tail"
+
+[diff]
+tool = vimdiff      # Use Vimdiff as the diff tool.
+renames = copies    # Detect the rename for better diffs
+
+[merge]
+tool = vimdiff              # Use Vimdiff as the merge tool
+conflictstyle = diff3       # Include base changes in conflict markers
+ff = only                   # Enforce fast-forward merges
+
+[log]
+abbrevCommit = true     # Short commit hashes
+decorate = short        # Add branch and tag names
+graph = true            # Show the commit graph
+
+[color]
+ui = auto               # Enable color for Git output
+
+[push]
+default = simple        # Push the current branch by default
+
+[pull]
+rebase = true           # Rebase instead on merge on pull
+
+[interactive]
+diffFilter = delta      # Use `delta` for improved diffs in interactive mode
+
+[rerere]
+enabled = true          # Automically remember conflict resolution
+
+[http]
+postBuffer = 157286400      # Increase buffer size for large file
+
+[credential]
+helper = store              # Cache credentials locally
+
+[delta]
+features = side-by-side     # Use Delta for rich diffs
+plus-style = "syntax #012800"   # Green background for additions
+minus-style = "syntax #3400013" # Red background for deletions 

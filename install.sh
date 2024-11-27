@@ -23,3 +23,10 @@ if ! [[ -f ~/.vimrc ]]; then
 else
 	echo '.virmc already installed.'
 fi
+
+if ! [[ -f ~/.gitconfig ]]; then
+    ln -s ~/.dotfiles/git/gitconfig  ~/.gitconfig
+    echo '.gitconfig installed.'
+else
+    echo '.gitconfig already installed.'
+fi
