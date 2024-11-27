@@ -98,6 +98,6 @@ Contributions are welcome! Feel free to fork this repository, make changes, and 
 
 ## License
 
-This project is open-source and available under the MIT License. Feel free to use, modify, and distribute as needed.
+This project is open-source and available under the GPL-3.0 License. Feel free to use, modify, and distribute as needed.
 
 ---
