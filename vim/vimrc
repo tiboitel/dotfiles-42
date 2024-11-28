@@ -60,43 +60,21 @@ set linebreak
 set undofile                  " Save undo history across sessions
 set undodir=~/.vim/undo        " Define the directory for undo history
 
-" Define the plugin manager (vim-plug)
-" call plug#begin('~/.vim/plugged')
-
-" Essential Plugins
-" Plug 'junegunn/fzf.vim'                 " Fuzzy Finder for efficient file searching
-" Plug 'preservim/nerdtree'               " File tree explorer
-" Plug 'vim-airline/vim-airline'          " Lightweight status line
-" Plug 'vim-airline/vim-airline-themes'   " Additional airline themes
-" Plug 'tpope/vim-fugitive'               " Git integration
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Autocomplete engine (like VS Code)
-" Plug 'scrooloose/nerdcommenter'        " Commenting support
-" Plug 'itchyny/lightline.vim'            " Lightweight alternative to vim-airline
-" Plug 'jiangmiao/auto-pairs'             " Automatically closes pairs (braces, quotes)
-" Plug 'fatih/vim-go'                    " Go language support
-" Plug 'sheerun/vim-polyglot'             " Support for multiple programming languages
-
-" End of plugins
-" call plug#end()
-
 " Key Mappings
-" nnoremap <leader>ff :Files<CR>         " Fuzzy find files using fzf
-" nnoremap <leader>bb :Buffers<CR>       " Switch between buffers using fzf
-" nnoremap <leader>fg :Ag<CR>            " Fuzzy find text using fzf and Ag
-" nnoremap <leader>n :NERDTreeToggle<CR> " Toggle NERDTree file explorer
-" nnoremap <leader>gc :Git commit<CR>    " Open git commit dialog (Fugitive)
-" nnoremap <leader>gt :Git status<CR>    " Open git status in Fugitive
-" nnoremap <leader>p :Files<CR>          " Open files with fuzzy search (fzf)
-" nnoremap <leader>s :Buffers<CR>        " Switch between buffers with fuzzy search
+nnoremap <leader>ff :Files<CR>         " Fuzzy find files using fzf
+nnoremap <leader>bb :Buffers<CR>       " Switch between buffers using fzf
+nnoremap <leader>fg :Ag<CR>            " Fuzzy find text using fzf and Ag
+nnoremap <leader>n :NERDTreeToggle<CR> " Toggle NERDTree file explorer
+nnoremap <leader>gc :Git commit<CR>    " Open git commit dialog (Fugitive)
+nnoremap <leader>gt :Git status<CR>    " Open git status in Fugitive
+nnoremap <leader>p :Files<CR>          " Open files with fuzzy search (fzf)
+nnoremap <leader>s :Buffers<CR>        " Switch between buffers with fuzzy search
 
 " Enable the coc.nvim auto-completion engine
-" autocmd FileType * setlocal omnifunc=CocActionAsync
-
-" Enable auto-pairing of characters (braces, quotes, etc.)
-" autocmd FileType * call AutoPairsInit()
+autocmd FileType * setlocal omnifunc=CocActionAsync
 
 " Enable Nerd Commenter keybindings
-" let g:NERDCreateDefaultMappings = 1
+let g:NERDCreateDefaultMappings = 1
 
 " Customize the appearance
 set background=dark              " Dark background for a modern look
@@ -113,4 +91,43 @@ set foldlevelstart=99            " Open all folds by default
 " Miscellaneous optimizations
 set lazyredraw                  " Optimize redrawing (improves performance)
 
+" Disable startup version warnings.
+let g:coc_disable_startup_warning = 1
 
+" vim-plug section
+call plug#begin('~/.vim/plugged')
+
+" Fuzzy Finder for efficient file searching
+Plug 'junegunn/fzf.vim'
+
+" File tree explorer
+Plug 'preservim/nerdtree'
+
+" Lightweight status line
+Plug 'vim-airline/vim-airline'
+
+" Additional airline themes
+Plug 'vim-airline/vim-airline-themes'
+
+" Git integration
+Plug 'tpope/vim-fugitive'
+
+" Autocomplete engine (like VS Code)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Commenting support
+Plug 'scrooloose/nerdcommenter'
+
+" Lightweight alternative to vim-airline
+Plug 'itchyny/lightline.vim'
+
+" Automatically closes pairs (braces, quotes)
+Plug 'jiangmiao/auto-pairs'
+
+" Go language support
+Plug 'fatih/vim-go'
+
+" Polyglot support for multiple languages
+Plug 'sheerun/vim-polyglot'
+
+call plug#end()

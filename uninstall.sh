@@ -27,3 +27,19 @@ if [[ -n ~/.gitconfig ]]; then
 else
     echo ".gitconfig file doesn't exist."
 fi
+
+# Check if ~/.vim/autoload directory exists and delete it
+if [[ -d ~/.vim/autoload ]]; then
+    rm -rf ~/.vim/autoload
+    echo '.vim/autoload directory deleted.'
+else
+    echo ".vim/autoload directory doesn't exist."
+fi
+
+# Check if ~/.vim/plugged directory exists and delete it
+if [[ -d ~/.vim/plugged ]]; then
+    rm -rf ~/.vim/plugged
+    echo '.vim/plugged directory deleted.'
+else
+    echo ".vim/plugged directory doesn't exist."
+fi
