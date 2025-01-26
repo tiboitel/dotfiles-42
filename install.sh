@@ -14,6 +14,7 @@ if ! [[ -d ~/.zsh ]]; then
         mkdir ~/.zsh
         ln -s ./git/git_prompt.sh ~/.zsh/git_prompt.sh
         chmod +x ~/.zsh/git_prompt.sh
+        source ~/.zshrc
     echo '.zsh directory created.'
 else
         echo '.zsh directory already exists.'
