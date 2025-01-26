@@ -44,11 +44,11 @@ Clone this repository to your home directory, then modify gitconfig file with
 your name and main and finally run the setup script:
 
 ```bash
-git clone https://github.com/tiboitel/dotfiles-42.git
-cd dotfiles-42
+cd ~
+git clone https://github.com/tiboitel/dotfiles-42.git .dotfiles
+cd .dotfiles
 vim git/gitconfig # Change name, mail and email with your login and student mail.
-./uninstall.sh && ./install.sh # Clean your old configuration and install the
-new one.
+./uninstall.sh && ./install.sh # Clean your old configuration and install the new one.
 ```
 
 ### Uninstallation
