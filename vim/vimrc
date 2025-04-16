@@ -7,9 +7,10 @@ set clipboard=unnamedplus     " Use the system clipboard for copy/paste
 set showmatch                 " Highlight matching parentheses/brackets
 set ignorecase                " Ignore case in search
 set smartcase                 " Override ignorecase if the search pattern has upper case
-set tabstop=4                 " Set tab width to 4 spaces
-set shiftwidth=4              " Indentation width (spaces)
-set expandtab                 " Convert tabs to spaces
+set tabstop=4               " Set tab width to 4 spaces
+set shiftwidth=4            " Indentation width (spaces)
+"set noexpandtab                " Convert tabs to spaces
+set noet
 set autoindent                " Enable automatic indentation
 set smartindent               " Enable smart indentation
 set wrap                      " Wrap text at the edge of the window
